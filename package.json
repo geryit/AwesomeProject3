@@ -6,8 +6,8 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "ios": "yarn; react-native run-ios",
-    "web": "yarn; webpack-dev-server -d --config ./web/webpack.config.js  --inline --hot --colors --content-base ./web/public/ --history-api-fallback",
-    "build": "NODE_ENV=production webpack -p --config ./web/webpack.config.js"
+    "web": "yarn; webpack-dev-server -d --config ./webpack.config.js  --inline --hot --colors --content-base ./public/ --history-api-fallback",
+    "build": "NODE_ENV=production webpack -p --config ./webpack.config.js"
   },
   "dependencies": {
     "@babel/core": "^7.0.0-beta.54",
