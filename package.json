@@ -7,8 +7,7 @@
     "test": "jest",
     "ios": "yarn; react-native run-ios",
     "web": "yarn; webpack-dev-server -d --config ./web/webpack.config.js  --inline --hot --colors --content-base ./web/public/ --history-api-fallback",
-    "web-build": "yarn; NODE_ENV=production webpack -p --config ./web/webpack.config.js",
-    "serve": "yarn; http-server ./public"
+    "build": "NODE_ENV=production webpack -p --config ./web/webpack.config.js"
   },
   "dependencies": {
     "@babel/core": "^7.0.0-beta.54",
@@ -25,7 +24,6 @@
     "eslint-plugin-react-native": "^3.2.1",
     "expo": "^29.0.1-rc.0",
     "expo-web": "0.0.14",
-    "http-server": "^0.11.1",
     "metro-react-native-babel-preset": "^0.43.6",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",

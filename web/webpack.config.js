@@ -16,6 +16,7 @@ const babelLoaderConfiguration = {
   include: [
     path.resolve(appDirectory, 'index.web.js'),
     path.resolve(appDirectory, 'src'),
+    path.resolve(appDirectory, 'node_modules/react-native-uncompiled'),
   ],
   use: {
     loader: 'babel-loader',
@@ -54,24 +55,7 @@ const imageLoaderConfiguration = {
   },
 };
 
-const ttfLoaderConfiguration = {
-  test: /\.ttf$/,
-  use: [
-    {
-      loader: 'file-loader',
-      options: {
-        name: './fonts/[hash].[ext]',
-      },
-    },
-  ],
-  include: [
-    path.resolve(appDirectory, './src/assets/fonts'),
-    path.resolve(appDirectory, 'node_modules/react-native-vector-icons'),
-  ],
-};
-
 module.exports = {
-  devtool: 'eval',
   entry: [
     // load any web API polyfills
     // path.resolve(appDirectory, 'polyfills-web.js'),
@@ -93,7 +77,6 @@ module.exports = {
       babelLoaderConfiguration,
       cssLoaderConfiguration,
       imageLoaderConfiguration,
-      ttfLoaderConfiguration,
     ],
   },
 
